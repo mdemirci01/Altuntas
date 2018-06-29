@@ -27,38 +27,16 @@
     <thead>
       <tr>
         <th>Id</th>
-        <th>Satıcı</th>
-        <th>Alıcı</th>
-        <th>Adres</th>
-        <th>Model</th>
-        <th>Genişlik</th>
-        <th>Yükseklik</th>
-        <th>Uzunluk</th>
-        <th>Aldığı Kalıplar</th>
-        <th>Garanti Bitiş Tarihi</th>
-        <th>Fatura Bedeli</th>
-        <th>Bizim Satış Bedeli</th>
-        <th>Komisyon</th>
-        <th>Extra Kalıp Fiyatı</th>
+        <th>Ad</th>
+        <th>Logo</th>
         <th>Açıklama</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of sales; let i = index">
+      <tr *ngFor="let item of sellers; let i = index">
         <td>{{item.id}}</td>
-        <td>{{item.seller.name}}</td>
-        <td>{{item.buyer.name}}</td>
-        <td>{{item.address}}</td>
-        <td>{{item.model}}</td>
-        <td>{{item.width}}</td>
-        <td>{{item.height}}</td>
-        <td>{{item.length}}</td>
-        <td>{{item.recievedForms}}</td>
-        <td>{{item.warrantyEndDate | date : "dd.MM.yyyy" }}</td>
-        <td>{{item.invoicePrice}}</td>
-        <td>{{item.ourSalePrice}}</td>
-        <td>{{item.commission}}</td>
-        <td>{{item.extraFormPrice}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.logo}}</td>
         <td>{{item.description}}</td>
       </tr>
     </tbody>

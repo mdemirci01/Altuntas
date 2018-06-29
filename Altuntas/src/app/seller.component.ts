@@ -1,18 +1,18 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'; //
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs'; //
-import { Sale } from './Sale';
+import { Seller } from './Seller';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'seller',
+  templateUrl: './seller.component.html',
+  styleUrls: ['./seller.component.css']
 })
-export class AppComponent implements OnDestroy, OnInit { //
+export class SellerComponent implements OnDestroy, OnInit { //
   dtOptions: DataTables.Settings = {}; //
-  dtTrigger: Subject<Sale> = new Subject(); //
+  dtTrigger: Subject<Seller> = new Subject(); //
   constructor(private http: HttpClient) { }
   title = 'Altuntaş';
-  sales:Sale[] = [];
+  sellers:Seller[] = [];
   ngOnInit(): void {
     this.dtOptions = { //
       pagingType: 'full_numbers',
@@ -21,8 +21,8 @@ export class AppComponent implements OnDestroy, OnInit { //
         "url": "//cdn.datatables.net/plug-ins/1.10.13/i18n/Turkish.json"
       }
     };
-    this.http.get("https://localhost:44351/api/sales").subscribe(data => {
-      this.sales = data as Sale[];
+    this.http.get("https://localhost:44351/api/sellers").subscribe(data => {
+      this.sellers = data as Seller[];
       this.dtTrigger.next(); //
     });
   }
