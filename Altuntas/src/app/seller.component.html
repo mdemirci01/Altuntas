@@ -1,49 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">{{title}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Satışlar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Satıcılar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Alıcılar</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
-<main role="main" class="container-fluid pt-3">
-  <h2>Satışlar</h2>
-  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Ad</th>
-        <th>Logo</th>
-        <th>Açıklama</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of sellers; let i = index">
-        <td>{{item.id}}</td>
-        <td>{{item.name}}</td>
-        <td>{{item.logo}}</td>
-        <td>{{item.description}}</td>
-      </tr>
-    </tbody>
-  </table>
-</main>
-<footer class="footer">
-  <div class="container">
-    <span class="text-muted">Altuntaş Makina Sanayi</span>
-  </div>
-</footer>
+<h2>Satıcılar</h2>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Ad</th>
+      <th>Logo</th>
+      <th>Açıklama</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of sellers; let i = index">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.logo}}</td>
+      <td>{{item.description}}</td>
+    </tr>
+  </tbody>
+</table>

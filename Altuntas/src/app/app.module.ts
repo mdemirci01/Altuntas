@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
 import { DataTablesModule } from 'angular-datatables';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { SaleComponent } from './sale.component';
+import { SellerComponent } from './seller.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, SaleComponent, SellerComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, DataTablesModule, AppRoutingModule
