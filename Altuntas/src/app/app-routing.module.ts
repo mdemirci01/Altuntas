@@ -7,7 +7,7 @@ import { SellerFormComponent } from './seller-form.component';
 const routes: Routes = [
   { path: 'sales', component: SaleComponent },
   { path: 'sellers', component: SellerComponent },
-  { path: 'seller-form', component: SellerFormComponent },
+  { path: 'seller-form/:id', component: SellerFormComponent },
   { path: '', redirectTo: '/sales', pathMatch: 'full' },
 ];
 @NgModule({
