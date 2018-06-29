@@ -9,17 +9,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
+var angular_datatables_1 = require("angular-datatables");
 var app_component_1 = require("./app.component");
+var sale_component_1 = require("./sale.component");
+var seller_component_1 = require("./seller.component");
+var seller_form_component_1 = require("./seller-form.component");
+var app_routing_module_1 = require("./app-routing.module");
+var forms_1 = require("@angular/forms");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             declarations: [
-                app_component_1.AppComponent
+                app_component_1.AppComponent, sale_component_1.SaleComponent, seller_component_1.SellerComponent, seller_form_component_1.SellerFormComponent
             ],
             imports: [
-                platform_browser_1.BrowserModule, http_1.HttpClientModule
+                platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpClientModule, angular_datatables_1.DataTablesModule, app_routing_module_1.AppRoutingModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

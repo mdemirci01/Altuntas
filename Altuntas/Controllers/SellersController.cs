@@ -66,8 +66,10 @@ namespace Altuntas.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Seller seller)
         {
+            db.Sellers.Add(seller);
+            db.SaveChanges();
         }
 
         // PUT api/values/5

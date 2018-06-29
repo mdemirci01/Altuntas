@@ -1,0 +1,23 @@
+<h2>Yeni Satıcı</h2>
+<div class="alert alert-success" [hidden]="!submitted">
+  Yeni satıcı başarıyla kaydedildi. <a routerLink="/sellers">Listeye Geri Dön.</a>
+</div>
+<form (ngSubmit)="onSubmit()" #sellerForm="ngForm">
+  <div class="form-group">
+    <label for="name">Ad</label>
+    <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="logo">Logo</label>
+    <input type="text" class="form-control" id="logo" [(ngModel)]="model.logo" name="logo">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Açıklama</label>
+    <textarea type="text" class="form-control" id="description" [(ngModel)]="model.description" name="description"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-success">Kaydet</button>
+
+</form>

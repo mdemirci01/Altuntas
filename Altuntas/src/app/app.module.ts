@@ -5,14 +5,16 @@ import { DataTablesModule } from 'angular-datatables';
 import { AppComponent } from './app.component';
 import { SaleComponent } from './sale.component';
 import { SellerComponent } from './seller.component';
+import { SellerFormComponent } from './seller-form.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent, SaleComponent, SellerComponent
+    AppComponent, SaleComponent, SellerComponent, SellerFormComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, DataTablesModule, AppRoutingModule
+    BrowserModule, FormsModule, HttpClientModule, DataTablesModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
